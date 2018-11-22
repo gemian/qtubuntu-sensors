@@ -1,3 +1,9 @@
+qtubuntu-sensors (0.7+gemian) stretch; urgency=medium
+
+  * Building for gemian.
+
+ -- Adam Boardman <adamboardman@gmail.com>  Thu, 22 Nov 2018 13:47:53 +0000
+ 
 qtubuntu-sensors (0.7+ubports) xenial; urgency=medium
 
   * Imported to UBports

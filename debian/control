@@ -1,7 +1,7 @@
 Source: qtubuntu-sensors
 Section: libs
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Maintainer: Adam Boardman <adamboardman@gmail.com>
 Build-Depends: debhelper (>= 9),
                cmake,
                libgtest-dev,
@@ -14,14 +14,8 @@ Build-Depends: debhelper (>= 9),
                qtfeedback5-dev,
                qtlocation5-dev,
                libqt5sensors5-dev,
-               qtpositioning5-dev,
 Standards-Version: 3.9.4
-Homepage: https://launchpad.net/qtubuntu-sensors
-# if you don't have have commit access to this branch but would like to upload
-# directly to Ubuntu, don't worry: your changes will be merged back into the
-# upstream branch
-Vcs-Bzr: lp:qtubuntu-sensors
-Vcs-Browser: https://code.launchpad.net/qtubuntu-sensors
+Homepage: https://github.com/gemian/qtubuntu-sensors
 
 Package: qtubuntu-sensors
 Architecture: i386 amd64 armhf arm64

@@ -1,7 +1,0 @@
-{
-    "Keys": ["ubuntu"],
-    "Provider": "ubuntu",
-    "Position": true,
-    "Satellite": false,
-    "Priority": 2000
-}
