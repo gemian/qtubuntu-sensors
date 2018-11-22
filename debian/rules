@@ -3,6 +3,11 @@
 # Daily release standard
 export DPKG_GENSYMBOLS_CHECK_LEVEL=4
 
+DEB_HOST_ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
+# Skip tests on the archs they are known to be flaky with current configuration
+# Ref.: https://bugs.launchpad.net/ubuntu/+source/mesa/+bug/1585942
+testskip_architectures := arm64 powerpc s390x
+
 # This has to be exported to make some magic below work.
 export DH_OPTIONS
 export QT_QPA_PLATFORM = minimal
@@ -19,6 +24,6 @@ override_dh_install:
 	rm -rf debian/qtubuntu-sensors/usr/include/*
 
 override_dh_auto_test:
-ifeq (, $(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+ifneq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(testskip_architectures)))
 	cd obj-* && ctest --verbose
 endif
