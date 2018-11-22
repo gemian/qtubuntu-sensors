@@ -11,7 +11,6 @@ Build-Depends: debhelper (>= 9),
                pkg-config,
                qtbase5-dev,
                qtfeedback5-dev,
-               qtlocation5-dev,
                libqt5sensors5-dev,
 Standards-Version: 3.9.4
 Homepage: https://github.com/gemian/qtubuntu-sensors
