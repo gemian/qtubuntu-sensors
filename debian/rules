@@ -13,6 +13,11 @@ export QT_QPA_PLATFORM = minimal
 override_dh_install:
 	dh_install --fail-missing
 
+	# Remove test files
+	rm -f debian/qtubuntu-sensors/usr/lib/libgtest.a
+	rm -f debian/qtubuntu-sensors/usr/lib/libgtest_main.a
+	rm -rf debian/qtubuntu-sensors/usr/include/*
+
 override_dh_auto_test:
 ifeq (, $(findstring nocheck, $(DEB_BUILD_OPTIONS)))
 	cd obj-* && ctest --verbose
